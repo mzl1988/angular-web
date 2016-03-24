@@ -1,0 +1,58 @@
+sizes = {
+  zero: 0px
+  xxs: 1px
+  xs: 3px
+  sm: 5px
+  sd: 8px
+  md: 10px
+  mds: 15px
+  lg: 20px
+  xl: 30px
+  xxl: 40px
+}
+for position in top left right bottom
+  for size, value in sizes
+    .margin-{position}-{size}
+      margin-{position} value!important
+
+for size, value in sizes
+    .margin-{size}
+      margin value!important
+
+for position in top left right bottom
+  for size, value in sizes
+    .padding-{position}-{size}
+      padding-{position} value!important
+
+for size, value in sizes
+    .padding-{size}
+      padding value!important
+
+wd-sizes = {
+  zero: 0
+  xxs: 60px
+  xs: 90px
+  sm: 150px
+  sd: 200px
+  md: 240px
+  mds: 260px
+  lg: 280px
+  xl: 320px
+  xxl: 360px
+  wide: 100%
+  auto: auto
+}
+
+for size, value in wd-sizes
+  .wd-{size}
+    width value
+
+.bg-white
+  background-color #ffffff !important
+  color #4d4d4d
+
+.no-margin
+  margin 0 !important
+
+.no-border
+  border 0 !important

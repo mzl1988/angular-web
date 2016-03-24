@@ -1,0 +1,60 @@
+.brand
+  a.brand(ui-sref='app.weclome')
+    i.fa.fa-newspaper-o.margin-right-md
+    span
+      b news
+
+ul.nav.navbar-nav.navbar-right
+  li
+    a(href="javascript:;")
+      | 李蘭國
+  li.notifications.dropdown(uib-dropdown)
+    a.dropdown-toggle(href="javascript:;", uib-dropdown-toggle, role='button', aria-expanded='false')
+      i.fa.fa-bell
+      .badge.animated.flash 3
+    .dropdown-menu.dropdown-menu-right.padding-bottom-zero.animated.slideInRight(role='menu')
+      .panel.bg-white.no-border.no-margin
+        .panel-heading.no-radius
+          small
+            b Notifications
+          small.pull-right
+            a.margin-right-sm(href="javascript:;") mark as read
+            | &#8226;
+            a.fa.fa-cog.margin-left-sm(href="javascript:;")
+        ul.list-group
+          li.list-group-item
+            a(href="javascript:;")
+              span.pull-left.margin-top-sm.margin-right-mds
+                img.avatar.avatar-sm.img-circle(src="./images/user-1.jpg", alt="")
+              .m-body.show.padding-top-sm
+                span Dean Winchester
+                span Posted on to your wall
+                small 2 mins ago
+          li.list-group-item
+            a(href="javascript:;")
+              span.pull-left.margin-top-sm.margin-right-mds
+                img.avatar.avatar-sm.img-circle(src="./images/user-2.jpg", alt="")
+              .m-body.show.padding-top-sm
+                span Application
+                span Where is my workspace widget
+                small 5 days ago
+        .panel-footer.no-border.bg-white
+          a(href="javascript:;") See all notifications
+  li.quickmenu.dropdown(uib-dropdown)
+    a.dropdown-toggle(href="javascript:;", uib-dropdown-toggle, role='button', aria-expanded='false')
+      img.avatar.pull-left.img-circle(src="./images/user.jpg", alt="user", title="user")
+      i.caret.margin-left-sm
+    ul.dropdown-menu.dropdown-menu-right.margin-right-sm.padding-bottom-zero(role='menu')
+      li
+        a(href="profile.html") Settings
+      li
+        a(href="javascript:;") Upgrade
+      li
+        a(href="javascript:;")
+          | Notifications
+          .badge.pull-right 3
+      li
+        a(href="javascript:;") Help ?
+      li.divider
+      li
+        a(href="signin.html") Logout

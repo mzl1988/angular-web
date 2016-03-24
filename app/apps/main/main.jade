@@ -1,0 +1,6 @@
+header.header(ng-include="'apps/header/header'")
+section(class="layout")
+  aside.sidebar(ng-include="'apps/sidebar/sidebar'" ng-controller="SidebarCtrl")
+  section.main-content
+    .content-wrap
+      ui-view

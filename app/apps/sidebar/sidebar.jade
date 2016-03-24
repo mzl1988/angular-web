@@ -1,0 +1,52 @@
+nav.main-navigation(style="bottom: 50px;")
+  ul
+    li(ui-sref="app.weclome" ui-sref-active="active")
+      a
+        i.fa.fa-coffee
+        span 首頁
+    li.dropdown.show-on-hover(uib-dropdown ng-class="{'active': nowUrl =='/user-list'}")
+      a(uib-dropdown-toggle)
+        i.fa.fa-users
+        span 用戶管理
+      ul.dropdown-menu(uib-dropdown-menu role="menu")
+        li(ui-sref="app.user-list" ui-sref-active="active")
+          a
+            span 用戶列表
+        li
+          a
+            span Forms
+        li
+          a
+            span Tables
+        li
+          a
+            span Calendar
+        li
+          a
+            span Components
+        li
+          a
+            span Sortable
+        li
+          a
+            span Charts
+
+    li
+      a
+        i.fa.fa-info
+        span 日誌
+footer
+  .about-app.padding-mds(ng-if="aboutShow == true" )
+    a
+      img(src="./images/user.jpg", alt="")
+    span
+      b news
+      | &nbsp;使用Angular Bootstrap 3.
+      a
+        b Find out more
+  .footer-toolbar.pull-left
+    a.pull-left.help(ng-click="aboutShow = !aboutShow")
+      i.fa.fa-question-circle
+    a.toggle-sidebar.pull-right
+      i.fa.fa-angle-left
+
