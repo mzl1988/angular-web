@@ -28,13 +28,5 @@ Usage
 
         $ gulp build -P
 
-config.js
-angular.module('app').constant 'config', 
-   api: 
-      baseUrl: 'http://api.esocialhub.org'
-
-router.coffee
-angular.module 'app'
-.config ($stateProvider) ->
 
 
