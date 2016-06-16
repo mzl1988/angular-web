@@ -98,7 +98,7 @@ gulp.task 'jade', ->
       angular.module('app')
       .run(['$templateCache', function($templateCache) {
         var template = #{data.contents}
-        $templateCache.put('#{data.relative.replace '.js', ''}', template());
+        $templateCache.put('#{data.relative.replace(/\\/g, '/').replace '.js', ''}', template());
       }]);
     """
     @queue data

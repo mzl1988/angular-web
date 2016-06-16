@@ -18,10 +18,6 @@ angular.module 'app', [
       templateUrl: 'apps/weclome/weclome'
       controller: 'WeclomeCtrl'
 
-    .state 'app.user-list',
-      url: '/user-list'
-      templateUrl: 'apps/user/list/list'
-      controller: 'UserListCtrl'
   $urlRouterProvider.otherwise("/weclome")
 
 

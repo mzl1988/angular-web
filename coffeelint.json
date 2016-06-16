@@ -25,7 +25,7 @@
     "line_endings": {
         "name": "line_endings",
         "level": "error",
-        "value": "unix"
+        "value": "windows"
     },
     "no_trailing_semicolons": {
         "name": "no_trailing_semicolons",

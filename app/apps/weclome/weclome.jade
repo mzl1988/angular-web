@@ -1,1 +1,12 @@
-span weclome
+form
+  .form-group
+    label(for='exampleInputEmail1') Email address
+    input#exampleInputEmail1.form-control(type='email', placeholder='Email' ng-model="ui.email")
+  .form-group
+    label(for='exampleInputPassword1') Password
+    input#exampleInputPassword1.form-control(type='password', placeholder='Password' ng-model="ui.password")
+  .checkbox
+    label
+      input(type='checkbox' ng-model="ui.checkMe")
+      |  Check me out
+  button.btn.btn-default(type='button' ng-click="save()") Submit
