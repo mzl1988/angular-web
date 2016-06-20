@@ -9,4 +9,39 @@ form
     label
       input(type='checkbox' ng-model="ui.checkMe")
       |  Check me out
-  button.btn.btn-default(type='button' ng-click="save()") Submit
+  button.btn.btn-default(type='button' ng-click="save()")
+    | Submit
+
+br
+br
+.panel.panel-default(index="ddd")
+  .panel-heading
+    .row
+      .col-md-12
+        button(type="button" ng-click="addUser()").btn.btn-success.pull-right
+          | 增加
+  table.table
+    thead
+      tr
+        th #
+        th First Name
+        th Last Name
+        th Username
+        th
+    tbody
+      tr(ng-repeat="user in ui.users")
+        th {{$index}}
+        td {{user.firstName}}
+        td {{user.lastName}}
+        td
+          input(type='text', placeholder='username' ng-model="user.userName").form-control
+        td
+          button(type="button" ng-if="$index != 0" ng-click="upRecord($index)").btn.btn-primary.margin-right-md
+            | 上移
+          button(type="button" ng-if="($index + 1) != ui.users.length" ng-click="downRecord($index)").btn.btn-success.margin-right-md
+            | 下移
+          button(type="button" ng-click="delUser($index)").btn.btn-danger.margin-right-md
+            | 删除
+          button(type="button" ng-click="saveUser(user)").btn.btn-default
+            | 保存
+      

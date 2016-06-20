@@ -12,6 +12,9 @@ angular.module 'app', [
       abstract: true
       templateUrl: 'apps/main/main'
       controller: 'MainCtrl'
+      resolve:
+        checkLogin: (config, $state) ->
+
 
     .state 'app.weclome',
       url: '/weclome'
